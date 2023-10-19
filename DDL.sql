@@ -4,15 +4,15 @@ create schema spring;
 
 use spring;
 
-create table tra_trabalho (
- tra_id bigint primary key auto_increment,
- tra_titulo varchar(100) not null unique,
- tra_data_hora_entrega datetime not null,
- tra_descricao varchar(200),
- tra_grupo varchar(20) not null,
- tra_nota int,
- tra_justificativa varchar(100)
-);
-insert into tra_trabalho (tra_titulo, tra_data_hora_entrega, tra_grupo, tra_nota, tra_justificativa)
- values ('Teste 1', current_timestamp(), 'Alpha', 6, 'Bom, mas falta conteúdo'),
- ('Teste 2', current_timestamp(), 'Beta', 3, 'Incompleto');
+create table jog_jogo (
+ jog_id bigint primary key auto_increment,
+ jog_titulo varchar(100) not null,
+ jog_estudio varchar(100) not null,
+ jog_data_hora_lancamento datetime not null,
+ jog_classificacao varchar(3),
+ jog_duracao_media float
+ );
+insert into jog_jogo (jog_titulo, jog_estudio, jog_data_hora_lancamento)
+ values ('God of War', 'Santa Monica', '2005-3-22 00:00:00');
+insert into jog_jogo (jog_titulo, jog_estudio, jog_data_hora_lancamento, jog_classificacao, jog_duracao_media)
+ values ('Hogwarts Legacy', 'Avalanche', '2023-2-10 00:00:00', '12', 25)
